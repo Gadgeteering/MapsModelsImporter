@@ -44,6 +44,10 @@ def getBinaryDir():
 			"32bit": "linux32",
 			"64bit": "linux64",
 		},
+		"Darwin": {
+
+			"64bit": "osx",
+		},
 	}[platform.system()][platform.architecture()[0]]
 	return os.path.join(os.path.dirname(os.path.realpath(__file__)), "bin", platform_dir)
 
