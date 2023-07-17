@@ -1,10 +1,5 @@
 *If this helps you save time or money for your job, please consider supporting the work involved in here ;)* [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=DNEEF8GDX2EV6&currency_code=EUR&source=url)
 
-**News** As of January 2023, Only versions older or equal to 0.5.0 no longer work because the associated version of RenderDoc are no longer able to inject into Chrome. Use version 0.6.0 (for RenderDoc 1.25 and Blender 3.4) or newer!
-
-**News** As of Aug 23, 2020, [**Google Earth** web](https://earth.google.com/web/) is now supported on top of Google Maps!
-
-**News** And since Aug 29, 2020, [**Mapy CZ**](https://mapy.cz) as well!
 
 Maps Models Importer
 ====================
@@ -63,14 +58,6 @@ Troubleshooting
 ---------------
 
 Useful information can be found in the comment of the video, as well as on [the support thread on blenderartists](https://blenderartists.org/t/google-maps-models-importer/1153561).
-
-### Check software versions
-
-Most importantly, use the last version of this add-on. In the release notes of each version the recommended/required versions of RenderDoc and Blender are specified. As of now, use RenderDoc v1.13 (**not** something else) and the last version of Blender.
-
-### Example of capture files
-
-To check your installation, you can try importing sample captures from [MapsModelsImporter-samples](https://github.com/eliemichel/MapsModelsImporter-samples).
 
 ### Linux
 
@@ -133,30 +120,18 @@ You can use the [LilyCaptureMerger](https://gumroad.com/l/KSvXuu) add-on for thi
 
 ### There are so many textures, it's impractical for export!
 
-You can check out the [LilyTexturePacker](https://gumroad.com/l/DFExj) add-on I've made especially for this. Beware to use it only **after** using LilyCaptureMerger, because the latter rely on individual block textures to perform matching.
-
-### How to clean up imported geometry
-
-Even though it won't make miracles, the following can help:
-
- - To join all chunks into a single mesh: A (to select all), Ctrl+J
- - To weld vertices: Switch to Edit mode (Tab), M > By Distance.
- - To set the scale to 1 without changing the size of the geometry: Ctrl+A > Scale
+You can check out the [LilyTexturePacker](https://gumroad.com/l/DFExj) add-on I've made especially for this. Beware to use it only **after** using LilyTextureMerger, because the latter rely on individual block textures to perform matching.
 
 ### It's taking too long, how to automate this process?
 
-Although I don't know how to automate the capture itself, you can easily automate the importing part, see [this issue](https://github.com/eliemichel/MapsModelsImporter/issues/39) for an example of automation script, or [this one](https://github.com/eliemichel/MapsModelsImporter/issues/128) to import all rdc files from a directory.
-
-### Importing fails with some "UnicodeEncodeError"
-
-Remove any special character from your filename and from the directories that contain it.
+Although I don't know how to automate the capture itself, you can easily automate the importing part, see [this issue](https://github.com/eliemichel/MapsModelsImporter/issues/39) for an example of automation script.
 
 Notable use cases
 -----------------
 
 I think the most common use case is to sketch out blockings in early stages of architecture perspectives. Another interesting usage is to get a "ground truth" reference when doing match moving or motion tracking on raw footage.
 
-Artistic uses have been reported as well, for instance [Benjamin Bardou](https://benjaminbardou.com) has been using it to create [stunning](https://www.instagram.com/p/CEH9PAcCG3B/) [images](https://www.instagram.com/p/CENlPPVCVF0/) of Paris.
+Artistic uses have been reported as well, for instance Benjamin Bardou has been using it to create [stunning](https://www.instagram.com/p/CEH9PAcCG3B/) [images](https://www.instagram.com/p/CENlPPVCVF0/) of Paris. The model may also be used as a base for concept art, especially by putting together parts of different captures.
 
 Feel free to notify me of your use case on twitter [@exppad](https://twitter.com/exppad)!
 
@@ -181,7 +156,7 @@ For more details, see individual [releases](https://github.com/eliemichel/MapsMo
 Help Wanted
 -----------
 
-This repository does not provide the required RenderDoc binaries for linux nor for OSX. If you have such a system, build RenderDoc against Python 3.9 (the minor version matters) to be compatible with the version of Blender's Python distribution. See [doc/Building RenderDoc module.md](doc/Building%20RenderDoc%20module.md).
+This repository does not provide the required RenderDoc binaries for linux nor for OSX. If you have such a system, build RenderDoc against Python 3.7.4 (the minor version matters) to be compatible with the version of Blender's Python distribution.
 
 Other links
 -----------
