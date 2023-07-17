@@ -20,6 +20,25 @@ Download a [release](https://github.com/eliemichel/MapsModelsImporter/releases) 
 
 Install [RenderDoc](https://renderdoc.org/builds), last version
 
+OSX Version:
+------------
+
+The first time that you use MapsModelsImporter on the Mac it is necessary to validate both library files (renderdoc.so and librenderdoc.dylib).
+
+These are located in the Library/Application Support/Blender/3.5/scripts/addons/MapsModelsImporter/bin in osx and lib folders. (replace 3.5 with the version of blender you are using)
+
+Right click on the files and open with text edit a warning message will be displayed click open, you only need to do this after installing the addon once.
+
+<img width="263" alt="Screenshot 2023-07-03 at 07 33 25" src="https://github.com/Gadgeteering/MapsModelsImporter/assets/6560476/ea264d9b-2df4-4112-9fcd-9963dac5b816">
+
+Also to note you cannot open captured .RDC files from windows and vice versa.
+
+Note: library files have been complied with a specfic version of Python these files are only compatible with this version of python used to build them with.
+
+In blender open the Python console to check the version of python which is being used. If you get a segmentation error this is a symptom of an incompatible python version with the library files. ( The minor and patch version can affect the compatiblity use )
+
+Current files are compatible with Python 3.10.12
+
 Usage
 -----
 
@@ -157,6 +176,9 @@ Help Wanted
 -----------
 
 This repository does not provide the required RenderDoc binaries for linux nor for OSX. If you have such a system, build RenderDoc against Python 3.7.4 (the minor version matters) to be compatible with the version of Blender's Python distribution.
+
+
+
 
 Other links
 -----------
